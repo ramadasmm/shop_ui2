@@ -76,13 +76,10 @@ class Home extends StatelessWidget {
                 "https://img.freepik.com/premium-vector/vector-hand-drawn-set-dishes-illustration-pots-pans-plates-utensils-cooking-kitchen-utensils_567840-132.jpg?w=2000",
             title: "Cooking\nEssential",
           ),
-          const SizedBox(
-            height: 5,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
+            children: [
+              const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text(
                   'Pakaged Food',
@@ -93,16 +90,16 @@ class Home extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 30),
-                child: Text(
-                  'View All',
-                  style: TextStyle(fontSize: 18, color: Colors.green),
+                padding: const EdgeInsets.only(right: 30),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text('View All'),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 0,
           ),
           Expanded(
             child: ListView(
