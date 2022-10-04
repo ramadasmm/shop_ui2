@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../Widgets/bottom_nav_bar.dart';
 import '../../Widgets/Home/dot_widget.dart';
 import '../../Widgets/Home/horiz_image.dart';
 import '../../Widgets/Home/pack_fd.dart';
@@ -13,35 +11,35 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: const [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'UserName',
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(50),
+        child: AppBar(
+          title: Column(
+            children: const [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'UserName',
+                ),
               ),
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Good Morning...!',
-                style:
-                    TextStyle(color: Colors.grey, fontStyle: FontStyle.italic),
-              ),
-            )
-          ],
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Good Morning...!',
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20),
+                ),
+              )
+            ],
+          ),
+          leading: const Icon(
+            Icons.menu,
+            color: Colors.black,
+          ),
         ),
-        leading: const Icon(
-          Icons.menu,
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.amber[50],
-        elevation: 0,
       ),
-      backgroundColor: Colors.amber[50],
 
       /*
       
