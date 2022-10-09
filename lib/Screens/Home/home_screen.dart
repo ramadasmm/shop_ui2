@@ -4,6 +4,7 @@ import '../../Widgets/Home/horiz_image.dart';
 import '../../Widgets/Home/pack_fd.dart';
 import '../../Widgets/Home/search_bar.dart';
 import '../../Widgets/Home/shop_categ_img.dart';
+import '../../Widgets/app_bar_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -13,31 +14,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
-        child: AppBar(
-          title: Column(
-            children: const [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'UserName',
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Good Morning...!',
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20),
-                ),
-              )
-            ],
-          ),
-          leading: const Icon(
-            Icons.menu,
-            color: Colors.black,
-          ),
+        child: AppBarWidget(
+          title: 'UserName',
+          icon: Icons.menu,
         ),
       ),
 

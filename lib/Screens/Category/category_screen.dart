@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_ui/Widgets/app_bar_widget.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -7,17 +8,8 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
-          child: AppBar(
-            title: const Text(
-              'Category',
-            ),
-            leading: const Icon(
-              Icons.menu,
-              color: Colors.black,
-            ),
-          ),
-        ),
+            preferredSize: const Size.fromHeight(50),
+            child: AppBarWidget(title: 'Category', icon: Icons.menu)),
         body: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: GridView.builder(
